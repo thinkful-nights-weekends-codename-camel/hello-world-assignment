@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta name="description" content="This is Sally Student's Resume." />
+    <link rel="stylesheet" href="main.css">
     <title>Sally Student's Resume</title>
   </head>
   <body>
@@ -13,7 +14,7 @@
     <script type="text/babel">
       // Our code will go here
       function Header() {
-        return <header></header>;
+        return <header><h1>Sally Student's Resume</h1></header>;
       }
       function Education() {
         return <section id='education'> 
@@ -31,40 +32,48 @@
       function Experience() {
         return <section id='experience'>
                 <h2>Sally's Professional Experience</h2>
-                <h3>Bills Marketing Agency</h3>
-                <div>Job Title: Public Relations Specialist</div>
-                <div>Dates of Employment</div>
-                <ul>
-                  <li>March 2016</li>
-                  <div>to</div>
-                  <li>January 2018</li>
-                </ul>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed scelerisque est. Maecenas tincidunt orci eu tortor rutrum, quis ultricies dui semper. Phasellus ut euismod massa, eget mollis justo.</p>
-                <h3>Bob Hortons</h3>
-                <div>Job Title: Cashier</div>
-                <div>Dates of Employment</div>
-                <ul>
-                  <li>July 2013
-                  </li>
-                  <div>to
+                <div id='experience-container'>
+                  <h3>Bills Marketing Agency</h3>
+                  <div id='experience-1'>
+                    <div>Job Title: Public Relations Specialist</div>
+                    <div>Dates of Employment</div>
+                    <ul>
+                      <li>March 2016</li>
+                      <div>to</div>
+                      <li>January 2018</li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed scelerisque est. Maecenas tincidunt orci eu tortor rutrum, quis ultricies dui semper. Phasellus ut euismod massa, eget mollis justo.</p>
                   </div>
-                  <li>March 2016
-                  </li>
-                </ul>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed scelerisque est. Maecenas tincidunt orci eu tortor rutrum, quis dui. Phasellus ut euismod massa, eget mollis justo.
-                </p>
+                  <h3>Bob Hortons</h3>
+                  <div id='experience-2'>
+                    <div>Job Title: Cashier</div>
+                    <div>Dates of Employment</div>
+                    <ul>
+                      <li>July 2013
+                      </li>
+                      <div>to
+                      </div>
+                      <li>March 2016
+                      </li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed scelerisque est. Maecenas tincidunt orci eu tortor rutrum, quis dui. Phasellus ut euismod massa, eget mollis justo.
+                    </p>
+                  </div>
+                </div>
               </section>;
       }
       function Contact() {
         return <address>
               <h2>Sally Student</h2>
-              <span>Email:</span>
-              <p><a href="sallystudent@someplace.com">Sally's Email</a></p>
+              <div id='contact-container'>
+                <span>Email:</span>
+                <a href="sallystudent@someplace.com">Sally's Email</a>
 
-              <span>Telephone:</span>
-              <p><a href="tel:1-562-867-5309">1-562-867-5309</a></p>
+                <span>Telephone:</span>
+                <a href="tel:1-562-867-5309">1-562-867-5309</a>
 
-              <img src="https://ia.media-imdb.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_UX214_CR0,0,214,317_AL_.jpg" alt="Sally Student " />
+                <img src="https://ia.media-imdb.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_UX214_CR0,0,214,317_AL_.jpg" alt="Sally Student " />
+              </div>
             </address>;
       }
       function App() {

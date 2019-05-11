@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+#application-root {
+    width: 80%;
+    margin: 0 auto;
+}
+header {
+    text-align: center;
+}
+h1 {
+    color: aqua;
+    text-shadow: 2px 2px 4px #007bac85;
+    font-size: 36pt;
+    margin: 2% auto;
+}
+h2 {
+    font-size: 20pt;
+    margin: 1% auto;
+}
+a:link, a:visited {
+    color: rgb(241, 87, 255);
+    padding: 10px 20px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+a:hover {
+    font-weight: 700;
+}
+#experience-container, *[id^='experience-'], p {
+    padding-left: 20px;
+}
+p {
+    width: 80%;
+    max-width: 500px;
+    margin: 0;
+}
+img {
+    display: block;
+    margin: 0 65px 5%;
+    border: rgba(0, 80, 145, 0.678) 2px solid;
+    box-shadow: 4px 4px 4px 4px rgba(0, 80, 145, 0.678);
+}
