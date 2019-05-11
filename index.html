@@ -12,13 +12,16 @@
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <script type="text/babel">
+
       // Our code will go here
-      function Header() {
-        return <header><h1>Sally Student's Resume</h1></header>;
+      function Header(props) {
+        return  <header>
+                  <h1>{props.name}'s Resume</h1>
+                </header>;
       }
-      function Education() {
+      function Education(props) {
         return <section id='education'> 
-                <h2>Sally's Education</h2>
+                <h2>{props.name}'s Education</h2>
                 <ul>
                   <li>
                     <a href="http://www.princeton.edu/" target="_blank">Princeton University</a>
@@ -29,9 +32,9 @@
                 </ul>
               </section>;
       }
-      function Experience() {
+      function Experience(props) {
         return <section id='experience'>
-                <h2>Sally's Professional Experience</h2>
+                <h2>{props.name}'s Professional Experience</h2>
                 <div id='experience-container'>
                   <h3>Bills Marketing Agency</h3>
                   <div id='experience-1'>
@@ -62,12 +65,12 @@
                 </div>
               </section>;
       }
-      function Contact() {
+      function Contact(props) {
         return <address>
-              <h2>Sally Student</h2>
+              <h2>{props.name}'s Contact Information</h2>
               <div id='contact-container'>
                 <span>Email:</span>
-                <a href="sallystudent@someplace.com">Sally's Email</a>
+                <a href="sallystudent@someplace.com">{props.name}'s Email</a>
 
                 <span>Telephone:</span>
                 <a href="tel:1-562-867-5309">1-562-867-5309</a>
@@ -76,19 +79,20 @@
               </div>
             </address>;
       }
-      function App() {
+      const studentName = 'Sally Student';
+      function App(props) {
         return (
           <React.Fragment>
-            <Header />
-            <Education />  
-            <Experience />  
-            <Contact />
+            <Header name={studentName}/>
+            <Education name={studentName}/>  
+            <Experience name={studentName}/>  
+            <Contact name={studentName}/>
           </React.Fragment>);
       }
       function AppRoot() {
         return document.querySelector('#application-root');
       }
-      ReactDOM.render( <App />, AppRoot());
+      ReactDOM.render(<App />, AppRoot());
     </script>
    
   </body>
